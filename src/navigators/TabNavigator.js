@@ -1,8 +1,8 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
-import DoctorListStack from './DoctorListStack';
-import SnapUpStack from './SnapUpStack';
+import ServiceStack from './ServiceStack';
+import UserStack from './UserStack';
 import HomeStack from './HomeStack';
 import CreditStack from './CreditStack';
 
@@ -35,9 +35,9 @@ const TabNavigator = () => {
       })}
     >
       <Tab.Screen name="Home" component={HomeStack} />
-      <Tab.Screen name="Service" component={DoctorListStack} />
+      <Tab.Screen name="Service" component={ServiceStack} />
       <Tab.Screen name="Credit" component={CreditStack} />
-      <Tab.Screen name="User" component={SnapUpStack} />
+      <Tab.Screen name="User" component={UserStack} />
     </Tab.Navigator>
   );
 };
