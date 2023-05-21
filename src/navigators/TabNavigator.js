@@ -2,9 +2,9 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
 import DoctorListStack from './DoctorListStack';
-import FAQStack from './FAQStack';
 import SnapUpStack from './SnapUpStack';
 import HomeStack from './HomeStack';
+import CreditStack from './CreditStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,7 +36,7 @@ const TabNavigator = () => {
     >
       <Tab.Screen name="Home" component={HomeStack} />
       <Tab.Screen name="Service" component={DoctorListStack} />
-      <Tab.Screen name="Credit" component={FAQStack} />
+      <Tab.Screen name="Credit" component={CreditStack} />
       <Tab.Screen name="User" component={SnapUpStack} />
     </Tab.Navigator>
   );

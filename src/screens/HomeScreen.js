@@ -1,26 +1,22 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import Balance from '../components/Balance';
-import Card from '../components/Card';
-import Product from '../components/Product';
-import Tips from '../components/Tips';
+import { View, Text, StyleSheet } from 'react-native';
 
 const HomeScreen = () => (
   <View style={styles.container}>
-    <Card title="Kemampuan Angsur" description="Rp 30,000,000" />
-    <Balance />      
-  
-    <Tips />
-
-    <Product title="RENOVASI Kary" />
+    <Text style={styles.welcome}>Selamat datang di Credit App!</Text>
   </View>
 );
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20
+    alignItems: 'center',
+    justifyContent: 'center',
   },
+  welcome: {
+    fontFamily: 'Poppins',
+    fontSize: 16
+  }
 });
 
 export default HomeScreen;
