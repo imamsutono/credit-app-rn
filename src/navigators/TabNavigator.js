@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 import DoctorListStack from './DoctorListStack';
 import FAQStack from './FAQStack';
 import SnapUpStack from './SnapUpStack';
@@ -12,22 +12,22 @@ const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        tabBarIcon: ({ color, size }) => {
+        tabBarIcon: ({ color }) => {
           let iconName;
 
-          if (route.name === 'Details') {
-            iconName = 'apps-outline';
-          } else if (route.name === 'Doctor List') {
-            iconName = 'ios-people-outline';
-          } else if (route.name === 'FAQ') {
-            iconName = 'ios-help-circle-outline';
-          } else if (route.name === 'Snap Up') {
-            iconName = 'cart-outline';
+          if (route.name === 'Home') {
+            iconName = 'home';
+          } else if (route.name === 'Service') {
+            iconName = 'grid';
+          } else if (route.name === 'Credit') {
+            iconName = 'credit-card';
+          } else if (route.name === 'User') {
+            iconName = 'user';
           }
 
-          return <Ionicons name={iconName} size={size} color={color} />;
+          return <Feather name={iconName} size={20} color={color} />;
         },
-        tabBarActiveTintColor: '#EF8C0B',
+        tabBarActiveTintColor: 'green',
         tabBarinactiveTintColor: 'gray',
         tabBarLabelStyle: {
           fontSize: 14,
